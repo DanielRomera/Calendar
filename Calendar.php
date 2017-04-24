@@ -150,13 +150,6 @@ class RaidCalendar extends BaseActiveModule
 			$output.="<font face='hyboriansmall' color='orange'>".$info['name']."</center> </font>Signed (".$json["raidstatus"]["status0"]["categories"][$category]["count"]."/".$json["raidstatus"]["status0"]["categories"][$category]["maxcount"].") Deviation <font color='".$color."'>".$dif."</font><br>";
 			foreach($json["raidstatus"]["status0"]["categories"][$category]["chars"] as $key=>$value)
 			{
-				if($value["name"]=="Pompero")
-				{
-					$value["name"]="Canino";
-					
-				}
-				
-				
 				
 				$last_seen = $this -> bot -> core("online") -> get_last_seen($value["name"], TRUE);
 				
@@ -189,9 +182,6 @@ class RaidCalendar extends BaseActiveModule
 				}
 				
 				$who["class"] = $this->get_user_class($value["classid"]);
-				
-				if($value["name"]=="Canino")
-					$value["name"]="Pompero";
 				
 				$output.=$online." <a href='chatcmd:///invitetoraid ".$value["name"]."'>".$value["name"]."</a> ".$alter_invite."- ".$who["class"]." - ".$value["rank"]."<br>";
 				
