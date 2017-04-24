@@ -5,45 +5,10 @@ define("API_KEY","ca488a62b93e8089b2d613f602af5dd74b28060a22d8feebcd3b95828b0819
 define("API_KEY_TYPE","user");
 
 /*
-* _ExampleModule.php - Module template.
-* <module name> - <module description>
-* <Copyright notice for your module>
-*
-* BeBot - An Anarchy Online & Age of Conan Chat Automaton
-* Copyright (C) 2004 Jonas Jax
-* Copyright (C) 2005-2010 Thomas Juberg, ShadowRealm Creations and the BeBot development team.
 *
 * Developed by:
-* - Alreadythere (RK2)
-* - Blondengy (RK1)
-* - Blueeagl3 (RK1)
-* - Glarawyn (RK1)
-* - Khalem (RK1)
-* - Naturalistic (RK1)
-* - Temar (RK1)
+* - Pompero
 *
-* See Credits file for all aknowledgements.
-*
-*  This program is free software; you can redistribute it and/or modify
-*  it under the terms of the GNU General Public License as published by
-*  the Free Software Foundation; version 2 of the License only.
-*
-*  This program is distributed in the hope that it will be useful,
-*  but WITHOUT ANY WARRANTY; without even the implied warranty of
-*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-*  GNU General Public License for more details.
-*
-*  You should have received a copy of the GNU General Public License
-*  along with this program; if not, write to the Free Software
-*  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
-*  USA
-*
-* File last changed at $LastChangedDate: 2008-11-30 23:09:06 +0100 (Sun, 30 Nov 2008) $
-* Revision: $Id: _ExampleModule.php 1833 2008-11-30 22:09:06Z alreadythere $
-*/
-
-/*
-Add a "_" at the beginning of the file (_ClassName.php) if you do not want it to be loaded.
 */
 
 $raidCalendar = new RaidCalendar($bot);
@@ -67,7 +32,7 @@ class RaidCalendar extends BaseActiveModule
 
 		
         //Registramos el comando
-        $this->register_command("all", "calendar", "ANONYMOUS");
+        $this->register_command("all", "calendar", "MEMBER");
 		
         //ayuda
         $this -> help['command']['calendar'] = "Shows the raid calendar info";
