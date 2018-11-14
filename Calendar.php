@@ -1,7 +1,7 @@
 <?php
 
 define("API_URL","destiny-aoc.net/dkp");
-define("API_KEY","ca488a62b93e8089b2d613f602af5dd74b28060a22d8feebcd3b95828b081973");
+define("API_KEY","ca488a62b9d3e8089b2d613f602af5dd74b28060a22d8feebcd3b95828b081973");
 define("API_KEY_TYPE","user");
 
 /*
